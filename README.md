@@ -21,7 +21,7 @@ app_port: 7860
 ---
 
 
-## 2. System Architecture
+## 1. System Architecture
 
 ```mermaid
 flowchart TD
@@ -64,7 +64,7 @@ flowchart TD
 
 ---
 
-## 3. Real Holdout Test Set Benchmark Results
+## 2. Real Holdout Test Set Benchmark Results
 
 Evaluated on the out-of-sample chronological holdout test set (24h lookahead horizon):
 
@@ -80,7 +80,7 @@ Evaluated on the out-of-sample chronological holdout test set (24h lookahead hor
 
 ---
 
-## 4. Rigorous Statistical Error Analysis
+## 3. Rigorous Statistical Error Analysis
 
 1. **Mean Bias Error (MBE):** $+1.84\text{ Wh}$ (error centered around zero with unbiased Gaussian characteristics).
 2. **Standard Deviation of Residuals:** $\sigma = 389.7\text{ Wh}$.
@@ -90,7 +90,7 @@ Evaluated on the out-of-sample chronological holdout test set (24h lookahead hor
 
 ---
 
-## 5. Quick Launch Instructions (Windows PowerShell)
+## 4. Quick Launch Instructions (Windows PowerShell)
 
 ### Option 1: One-Click Startup (Recommended)
 ```powershell
@@ -121,7 +121,7 @@ All 13 automated unit and integration tests will execute, verifying data enginee
 
 ---
 
-## 6. Cloud Deployment Instructions
+## 5. Cloud Deployment Instructions
 
 Detailed cloud deployment instructions for **Hugging Face Spaces** and **AWS** are available in [`docs/DEPLOYMENT.md`](file:///C:/Users/kish3/.gemini/antigravity/scratch/energysense/docs/DEPLOYMENT.md).
 
