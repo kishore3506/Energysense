@@ -1,0 +1,18 @@
+services:
+  energysense:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: energysense:latest
+    container_name: energysense-app
+    ports:
+      - "7860:7860"
+    environment:
+      - PORT=7860
+      - ENVIRONMENT=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
