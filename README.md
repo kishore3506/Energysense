@@ -20,19 +20,6 @@ app_port: 7860
 
 ---
 
-## 1. Project Evaluation Rubric Mapping & Verification
-
-EnergySense was built directly against the official project evaluation rubric. Below is the point-by-point compliance matrix:
-
-| S.No | Evaluation Component | Rubric Requirements | Marks | EnergySense Implementation Evidence |
-| :---: | :--- | :--- | :---: | :--- |
-| **1** | **Data Engineering & Visualization** | Dataset complexity, advanced feature engineering, dimensionality reduction, and depth of visual/explanatory insights. | **08 / 08** | **UCI Appliances Dataset** (19,735 records, 29 sensors). **Thermodynamic differentials** ($\Delta T = T_{out} - T_{in}$), dew point depression, cyclical time transforms ($\sin/\cos$), 24h lags, rolling window statistics. **Principal Component Analysis (PCA)** with scree plots, explained variance ratios, and feature loadings. |
-| **2** | **Advanced Modeling & Pipeline Optimization** | Architectural choice, automated pipelines, hyperparameter tuning (Optuna/Grid Search), and experiment logging. | **10 / 10** | **Stacked LSTM, Stacked GRU, and Bidirectional LSTM (BiLSTM)**. Automated chronological pipeline without data leakage. **Automated Bayesian Hyperparameter Search with Optuna** (TPE sampler). Immutable **SQLite experiment logging** (`model_metrics` & `tuning_trials`). |
-| **3** | **Benchmarking & Comparative Analysis** | Documented comparison against state-of-the-art methods/papers, metric evaluation, and rigorous error analysis. | **10 / 10** | Documented comparison against **Candanedo et al. (2017)** *Energy & Buildings* paper, **Random Forest**, **Ridge**, and **Persistence Baseline**. Metric evaluations (**MAE, RMSE, R², MAPE, ASHRAE CV-RMSE**). **Rigorous Error Analysis**: Mean bias, residual skewness, diurnal hourly error variance, and heteroscedasticity scatter. |
-| **4** | **Deployment & Containerization** | **FastAPI App**: Functional local inference app (4 Marks)<br>**Docker & Cloud**: Dockerized container hosted on Hugging Face Spaces / AWS (4 Marks) | **08 / 08** | **FastAPI Local Inference**: Interactive Swagger API docs (`/docs`), async endpoints, real-time prediction.<br>**Multi-Stage Docker**: Unified React + FastAPI single-port container. **Hugging Face Spaces** ready (Port 7860, YAML header) and **AWS EC2/App Runner** deployment guide (`docs/DEPLOYMENT.md`). |
-| | **TOTAL SCORE** | **Full Rubric Compliance** | **36 / 36** | **100% Academic & Technical Coverage** |
-
----
 
 ## 2. System Architecture
 
