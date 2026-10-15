@@ -35,7 +35,6 @@ RUN pip install --no-cache-dir -r ./backend/requirements.txt
 # Copy backend application, pre-packaged datasets, and artifacts
 COPY backend/ ./backend/
 COPY datasets/ ./datasets/
-COPY artifacts/ ./artifacts/
 
 # Copy compiled frontend from Stage 1 into backend/frontend_dist for unified static serving
 COPY --from=frontend-builder /app/frontend/dist ./backend/frontend_dist
